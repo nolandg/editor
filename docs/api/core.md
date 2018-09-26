@@ -2,123 +2,147 @@
 
 ### Table of Contents
 
--   [updateCellContent][1]
--   [updateCellLayout][2]
--   [removeCell][3]
--   [resizeCell][4]
--   [focusCell][5]
--   [focusNextCell][6]
--   [focusPreviousCell][7]
--   [blurCell][8]
--   [blurAllCells][9]
--   [createFallbackCell][10]
--   [src/editor/actions/cell/drag][11]
--   [cellHover][12]
--   [cellHoverLeftOf][13]
--   [cellHoverRightOf][14]
--   [cellHoverAbove][15]
--   [cellHoverBelow][16]
--   [cellHoverInlineLeft][17]
--   [cellHoverInlineRight][18]
--   [dragCell][19]
--   [clearHover][20]
--   [cancelCellDrag][21]
--   [insertCellBelow][22]
--   [insertCellAbove][23]
--   [insertCellRightOf][24]
--   [insertCellLeftOf][25]
--   [insertCellLeftInline][26]
--   [insertCellRightInline][27]
--   [insertMode][28]
--   [editMode][29]
--   [previewMode][30]
--   [layoutMode][31]
--   [resizeMode][32]
--   [previousMode][33]
--   [positions][34]
--   [Editor][35]
--   [isHoveringThis][36]
--   [sumSizes][37]
--   [computeBounds][38]
--   [computeResizeable][39]
--   [computeInlines][40]
--   [resizeCells][41]
--   [computeSizes][42]
--   [classes][43]
--   [defaultMatrices][44]
--   [getMouseHoverCell][45]
--   [last][46]
--   [relativeMousePosition][47]
--   [computeLevel][48]
--   [computeHorizontal][49]
--   [computeVertical][50]
--   [HoverService][51]
--   [defaultCallbacks][52]
--   [warn][53]
--   [debug][54]
--   [info][55]
--   [error][56]
--   [fatal][57]
--   [log][58]
--   [id][59]
--   [id][60]
--   [readOnly][61]
--   [readOnly][62]
--   [name][63]
--   [version][64]
--   [focused][65]
--   [focused][66]
--   [state][67]
--   [state][68]
--   [onChange][69]
--   [onChange][70]
--   [Migration][71]
--   [Plugin][72]
-    -   [name][73]
-    -   [description][74]
-    -   [migrations][75]
-    -   [version][76]
-    -   [IconComponent][77]
-    -   [Component][78]
-    -   [StaticComponent][79]
-    -   [text][80]
-    -   [serialize][81]
-    -   [unserialize][82]
-    -   [handleRemoveHotKey][83]
-    -   [handleFocusNextHotKey][84]
-    -   [handleFocusPreviousHotKey][85]
-    -   [handleFocus][86]
-    -   [handleBlur][87]
-    -   [reducer][88]
--   [ContentPlugin][89]
-    -   [isInlineable][90]
-    -   [allowInlineNeighbours][91]
-    -   [createInitialState][92]
-    -   [reducer][93]
--   [LayoutPlugin][94]
-    -   [createInitialState][95]
-    -   [createInitialChildren][96]
--   [type][97]
--   [createInitialChildren][98]
--   [isInlineable][99]
--   [allowInlineNeighbours][100]
--   [createInitialState][101]
--   [generateMissingIds][102]
--   [PluginService][103]
-    -   [findLayoutPlugin][104]
-    -   [findContentPlugin][105]
-    -   [getRegisteredNames][106]
--   [store][107]
+-   [insertMode][1]
+-   [editMode][2]
+-   [previewMode][3]
+-   [layoutMode][4]
+-   [resizeMode][5]
+-   [previousMode][6]
+-   [updateCellContent][7]
+-   [updateCellLayout][8]
+-   [removeCell][9]
+-   [resizeCell][10]
+-   [focusCell][11]
+-   [focusNextCell][12]
+-   [focusPreviousCell][13]
+-   [blurCell][14]
+-   [blurAllCells][15]
+-   [createFallbackCell][16]
+-   [src/editor/actions/cell/drag][17]
+-   [cellHover][18]
+-   [cellHoverLeftOf][19]
+-   [cellHoverRightOf][20]
+-   [cellHoverAbove][21]
+-   [cellHoverBelow][22]
+-   [cellHoverInlineLeft][23]
+-   [cellHoverInlineRight][24]
+-   [dragCell][25]
+-   [clearHover][26]
+-   [cancelCellDrag][27]
+-   [positions][28]
+-   [insertCellBelow][29]
+-   [insertCellAbove][30]
+-   [insertCellRightOf][31]
+-   [insertCellLeftOf][32]
+-   [insertCellLeftInline][33]
+-   [insertCellRightInline][34]
+-   [isHoveringThis][35]
+-   [sumSizes][36]
+-   [computeBounds][37]
+-   [computeResizeable][38]
+-   [computeInlines][39]
+-   [resizeCells][40]
+-   [computeSizes][41]
+-   [generateMissingIds][42]
+-   [PluginService][43]
+    -   [findLayoutPlugin][44]
+    -   [findContentPlugin][45]
+    -   [getRegisteredNames][46]
+-   [id][47]
+-   [id][48]
+-   [readOnly][49]
+-   [readOnly][50]
+-   [name][51]
+-   [version][52]
+-   [focused][53]
+-   [focused][54]
+-   [state][55]
+-   [state][56]
+-   [onChange][57]
+-   [onChange][58]
+-   [Migration][59]
+-   [Plugin][60]
+    -   [name][61]
+    -   [description][62]
+    -   [migrations][63]
+    -   [version][64]
+    -   [IconComponent][65]
+    -   [Component][66]
+    -   [StaticComponent][67]
+    -   [text][68]
+    -   [serialize][69]
+    -   [unserialize][70]
+    -   [handleRemoveHotKey][71]
+    -   [handleFocusNextHotKey][72]
+    -   [handleFocusPreviousHotKey][73]
+    -   [handleFocus][74]
+    -   [handleBlur][75]
+    -   [reducer][76]
+-   [ContentPlugin][77]
+    -   [isInlineable][78]
+    -   [allowInlineNeighbours][79]
+    -   [createInitialState][80]
+    -   [reducer][81]
+-   [LayoutPlugin][82]
+    -   [createInitialState][83]
+    -   [createInitialChildren][84]
+-   [type][85]
+-   [createInitialChildren][86]
+-   [isInlineable][87]
+-   [allowInlineNeighbours][88]
+-   [createInitialState][89]
+
+## insertMode
+
+[packages/core/src/actions/display.js:48-48][90]
+
+Dispatch to switch to insert display mode.
+
+## editMode
+
+[packages/core/src/actions/display.js:53-53][91]
+
+Dispatch to switch to edit display mode.
+
+## previewMode
+
+[packages/core/src/actions/display.js:58-58][92]
+
+Dispatch to switch to preview display mode.
+
+## layoutMode
+
+[packages/core/src/actions/display.js:63-63][93]
+
+Dispatch to switch to layout display mode.
+
+## resizeMode
+
+[packages/core/src/actions/display.js:68-68][94]
+
+Dispatch to switch to resize display mode.
+
+## previousMode
+
+[packages/core/src/actions/display.js:73-76][95]
+
+Dispatch to switch to the last display mode, or the fallback if reverting is not possible.
+
+**Parameters**
+
+-   `fallback` **[string][96]** 
+
+Returns **Action** 
 
 ## updateCellContent
 
-[packages/core/src/actions/cell/core.js:50-55][108]
+[packages/core/src/actions/cell/core.js:50-55][97]
 
 An action creator for updating a cell's content data.
 
 **Parameters**
 
--   `id` **[string][109]** The id of the cell that should be updated
+-   `id` **[string][96]** The id of the cell that should be updated
 
 **Examples**
 
@@ -132,13 +156,13 @@ Returns **Action**
 
 ## updateCellLayout
 
-[packages/core/src/actions/cell/core.js:68-73][110]
+[packages/core/src/actions/cell/core.js:68-73][98]
 
 An action creator for updating a cell's layout data.
 
 **Parameters**
 
--   `id` **[string][109]** The id of the cell that should be updated
+-   `id` **[string][96]** The id of the cell that should be updated
 
 **Examples**
 
@@ -152,14 +176,14 @@ Returns **Action**
 
 ## removeCell
 
-[packages/core/src/actions/cell/core.js:87-92][111]
+[packages/core/src/actions/cell/core.js:87-92][99]
 
 An action creator for removing a cell.
 
 **Parameters**
 
--   `id` **[string][109]** The id of the cell that should be removed.
--   `ids` **[string][109]** An array of IDs for new cells that might be created. (optional, default `[]`)
+-   `id` **[string][96]** The id of the cell that should be removed.
+-   `ids` **[string][96]** An array of IDs for new cells that might be created. (optional, default `[]`)
 
 **Examples**
 
@@ -173,14 +197,14 @@ Returns **Action**
 
 ## resizeCell
 
-[packages/core/src/actions/cell/core.js:106-111][112]
+[packages/core/src/actions/cell/core.js:106-111][100]
 
 An action creator for resizing a cell.
 
 **Parameters**
 
--   `id` **[string][109]** The id of the cell that should be removed.
--   `size` **[number][113]** The cell's new size.
+-   `id` **[string][96]** The id of the cell that should be removed.
+-   `size` **[number][101]** The cell's new size.
 
 **Examples**
 
@@ -190,51 +214,51 @@ An action creator for resizing a cell.
 store.dispatch(resizeCell(cell.id)(size))
 ```
 
-Returns **[Function][114]** 
+Returns **[Function][102]** 
 
 ## focusCell
 
-[packages/core/src/actions/cell/core.js:116-123][115]
+[packages/core/src/actions/cell/core.js:116-123][103]
 
 Dispatch to focus a cell.
 
 **Parameters**
 
--   `id` **[string][109]** 
+-   `id` **[string][96]** 
 
 ## focusNextCell
 
-[packages/core/src/actions/cell/core.js:128-132][116]
+[packages/core/src/actions/cell/core.js:128-132][104]
 
 Dispatch to focus a cell.
 
 **Parameters**
 
--   `id` **[string][109]** 
+-   `id` **[string][96]** 
 
 ## focusPreviousCell
 
-[packages/core/src/actions/cell/core.js:137-141][117]
+[packages/core/src/actions/cell/core.js:137-141][105]
 
 Dispatch to focus a cell.
 
 **Parameters**
 
--   `id` **[string][109]** 
+-   `id` **[string][96]** 
 
 ## blurCell
 
-[packages/core/src/actions/cell/core.js:146-150][118]
+[packages/core/src/actions/cell/core.js:146-150][106]
 
 Dispatch to blur a cell.
 
 **Parameters**
 
--   `id` **[string][109]** 
+-   `id` **[string][96]** 
 
 ## blurAllCells
 
-[packages/core/src/actions/cell/core.js:155-158][119]
+[packages/core/src/actions/cell/core.js:155-158][107]
 
 Dispatch to blur all cells. For example when clicking on document body.
 
@@ -242,22 +266,22 @@ Returns **Action**
 
 ## createFallbackCell
 
-[packages/core/src/actions/cell/core.js:163-169][120]
+[packages/core/src/actions/cell/core.js:163-169][108]
 
 Creates a fallback cell, usually done when an editable is empty.
 
 **Parameters**
 
 -   `fallback` **any** 
--   `editable` **[string][109]** 
+-   `editable` **[string][96]** 
 
 ## src/editor/actions/cell/drag
 
-[packages/core/src/actions/cell/drag.js:28-28][121]
+[packages/core/src/actions/cell/drag.js:28-28][109]
 
 ## cellHover
 
-[packages/core/src/actions/cell/drag.js:50-62][122]
+[packages/core/src/actions/cell/drag.js:50-62][110]
 
 Creates a redux action for when a cell hovers another item.
 
@@ -267,8 +291,8 @@ Creates a redux action for when a cell hovers another item.
     -   `drag.id`  
 -   `hover` **Cell** The cell that is being hovered by the dragged cell.
     -   `hover.id`  
--   `level` **[number][113]** Set the level if the dragged cells should hover over an ancestor of hover. (optional, default `0`)
--   `position` **[string][109]** Can be left, right, above, below.
+-   `level` **[number][101]** Set the level if the dragged cells should hover over an ancestor of hover. (optional, default `0`)
+-   `position` **[string][96]** Can be left, right, above, below.
 
 **Examples**
 
@@ -281,7 +305,7 @@ Returns **Action**
 
 ## cellHoverLeftOf
 
-[packages/core/src/actions/cell/drag.js:76-77][123]
+[packages/core/src/actions/cell/drag.js:76-77][111]
 
 Creates a redux action for when a cell is hovering another cell on the left.
 
@@ -289,7 +313,7 @@ Creates a redux action for when a cell is hovering another cell on the left.
 
 -   `drag` **Cell** The cell that is currently being dragged.
 -   `hover` **Cell** The cell that is being hovered by the dragged cell.
--   `level` **[number][113]** Set the level if the dragged cells should hover over an ancestor of hover.
+-   `level` **[number][101]** Set the level if the dragged cells should hover over an ancestor of hover.
 
 **Examples**
 
@@ -302,7 +326,7 @@ Returns **Action**
 
 ## cellHoverRightOf
 
-[packages/core/src/actions/cell/drag.js:91-92][124]
+[packages/core/src/actions/cell/drag.js:91-92][112]
 
 Creates a redux action for when a cell is hovering another cell on the right.
 
@@ -310,7 +334,7 @@ Creates a redux action for when a cell is hovering another cell on the right.
 
 -   `drag` **Cell** The cell that is currently being dragged.
 -   `hover` **Cell** The cell that is being hovered by the dragged cell.
--   `level` **[number][113]** Set the level if the dragged cells should hover over an ancestor of hover.
+-   `level` **[number][101]** Set the level if the dragged cells should hover over an ancestor of hover.
 
 **Examples**
 
@@ -323,7 +347,7 @@ Returns **Action**
 
 ## cellHoverAbove
 
-[packages/core/src/actions/cell/drag.js:106-107][125]
+[packages/core/src/actions/cell/drag.js:106-107][113]
 
 Creates a redux action for when a cell is hovering another cell above.
 
@@ -331,7 +355,7 @@ Creates a redux action for when a cell is hovering another cell above.
 
 -   `drag` **Cell** The cell that is currently being dragged.
 -   `hover` **Cell** The cell that is being hovered by the dragged cell.
--   `level` **[number][113]** Set the level if the dragged cells should hover over an ancestor of hover.
+-   `level` **[number][101]** Set the level if the dragged cells should hover over an ancestor of hover.
 
 **Examples**
 
@@ -344,7 +368,7 @@ Returns **Action**
 
 ## cellHoverBelow
 
-[packages/core/src/actions/cell/drag.js:121-122][126]
+[packages/core/src/actions/cell/drag.js:121-122][114]
 
 Creates a redux action for when a cell is hovering another cell below.
 
@@ -352,7 +376,7 @@ Creates a redux action for when a cell is hovering another cell below.
 
 -   `drag` **Cell** The cell that is currently being dragged.
 -   `hover` **Cell** The cell that is being hovered by the dragged cell.
--   `level` **[number][113]** Set the level if the dragged cells should hover over an ancestor of hover.
+-   `level` **[number][101]** Set the level if the dragged cells should hover over an ancestor of hover.
 
 **Examples**
 
@@ -365,7 +389,7 @@ Returns **Action**
 
 ## cellHoverInlineLeft
 
-[packages/core/src/actions/cell/drag.js:135-136][127]
+[packages/core/src/actions/cell/drag.js:135-136][115]
 
 Creates a redux action for when a cell is hovering another cell on the left, but inline (css floating).
 
@@ -385,7 +409,7 @@ Returns **Action**
 
 ## cellHoverInlineRight
 
-[packages/core/src/actions/cell/drag.js:149-150][128]
+[packages/core/src/actions/cell/drag.js:149-150][116]
 
 Creates a redux action for when a cell is hovering another cell on the right, but inline (css floating).
 
@@ -405,13 +429,13 @@ Returns **Action**
 
 ## dragCell
 
-[packages/core/src/actions/cell/drag.js:163-167][129]
+[packages/core/src/actions/cell/drag.js:163-167][117]
 
 Creates a redux action for when a cell is being dragged.
 
 **Parameters**
 
--   `id` **[string][109]** The id of the cell that is being dragged.
+-   `id` **[string][96]** The id of the cell that is being dragged.
 
 **Examples**
 
@@ -425,7 +449,7 @@ Returns **Action**
 
 ## clearHover
 
-[packages/core/src/actions/cell/drag.js:174-177][130]
+[packages/core/src/actions/cell/drag.js:174-177][118]
 
 Creates a redux action to clear hover state of all cells.
 
@@ -433,13 +457,13 @@ Returns **Action**
 
 ## cancelCellDrag
 
-[packages/core/src/actions/cell/drag.js:190-193][131]
+[packages/core/src/actions/cell/drag.js:190-193][119]
 
 Creates a redux action for when cell dragging ends.
 
 **Parameters**
 
--   `id` **[string][109]** 
+-   `id` **[string][96]** 
 
 **Examples**
 
@@ -451,190 +475,133 @@ store.dispatch(cancelCellDrag(cell.id))
 
 Returns **Action** 
 
+## 
+
+[packages/core/src/const.js:26-33][120]
+
+Is true if built in production mode.
+
+## positions
+
+[packages/core/src/const.js:26-33][120]
+
+A list of positions in the layout space.
+
 ## insertCellBelow
 
-[packages/core/src/actions/cell/insert.js:82-82][132]
+[packages/core/src/actions/cell/insert.js:82-82][121]
 
 Insert a cell below of the hovering cell.
 
 ## insertCellAbove
 
-[packages/core/src/actions/cell/insert.js:87-87][133]
+[packages/core/src/actions/cell/insert.js:87-87][122]
 
 Insert a cell above of the hovering cell.
 
 ## insertCellRightOf
 
-[packages/core/src/actions/cell/insert.js:92-92][134]
+[packages/core/src/actions/cell/insert.js:92-92][123]
 
 Insert a cell right of the hovering cell.
 
 ## insertCellLeftOf
 
-[packages/core/src/actions/cell/insert.js:97-97][135]
+[packages/core/src/actions/cell/insert.js:97-97][124]
 
 Insert a cell left of the hovering cell.
 
 ## insertCellLeftInline
 
-[packages/core/src/actions/cell/insert.js:102-102][136]
+[packages/core/src/actions/cell/insert.js:102-102][125]
 
 Insert a cell inside the hovering cell, on the left.
 
 ## insertCellRightInline
 
-[packages/core/src/actions/cell/insert.js:107-107][137]
+[packages/core/src/actions/cell/insert.js:107-107][126]
 
 Insert a cell inside the hovering cell, on the right.
 
-## insertMode
-
-[packages/core/src/actions/display.js:48-48][138]
-
-Dispatch to switch to insert display mode.
-
-## editMode
-
-[packages/core/src/actions/display.js:53-53][139]
-
-Dispatch to switch to edit display mode.
-
-## previewMode
-
-[packages/core/src/actions/display.js:58-58][140]
-
-Dispatch to switch to preview display mode.
-
-## layoutMode
-
-[packages/core/src/actions/display.js:63-63][141]
-
-Dispatch to switch to layout display mode.
-
-## resizeMode
-
-[packages/core/src/actions/display.js:68-68][142]
-
-Dispatch to switch to resize display mode.
-
-## previousMode
-
-[packages/core/src/actions/display.js:73-76][143]
-
-Dispatch to switch to the last display mode, or the fallback if reverting is not possible.
-
-**Parameters**
-
--   `fallback` **[string][109]** 
-
-Returns **Action** 
-
-## positions
-
-[packages/core/src/const.js:26-33][144]
-
-A list of positions in the layout space.
-
-## 
-
-[packages/core/src/const.js:26-33][144]
-
-Is true if built in production mode.
-
-## Editor
-
-[packages/core/src/index.js:72-154][145]
-
-Editor is the core interface for dealing with the editor.
-
-**Parameters**
-
--   `$0` **any**  (optional, default `{}`)
-    -   `$0.plugins`  
-    -   `$0.middleware`   (optional, default `[]`)
-    -   `$0.editables`   (optional, default `[]`)
-    -   `$0.defaultPlugin`   (optional, default `pluginDefault`)
-    -   `$0.dragDropBackend`  
-
 ## isHoveringThis
 
-[packages/core/src/reducer/editable/helper/hover.js:28-40][146]
+[packages/core/src/reducer/editable/helper/hover.js:28-40][127]
 
 Check if this item is currently being hovered.
 
 **Parameters**
 
--   `state` **[Object][147]**  (optional, default `{}`)
--   `action` **[Object][147]** 
+-   `state` **[Object][128]**  (optional, default `{}`)
+-   `action` **[Object][128]** 
 
-Returns **[boolean][148]** 
+Returns **[boolean][129]** 
 
 ## sumSizes
 
-[packages/core/src/reducer/editable/helper/sizing.js:31-37][149]
+[packages/core/src/reducer/editable/helper/sizing.js:31-37][130]
 
 Sum up cell sizes: Σ(cell[size]).
 
 **Parameters**
 
--   `cells` **[Array][150]&lt;Cell>**  (optional, default `[]`)
+-   `cells` **[Array][131]&lt;Cell>**  (optional, default `[]`)
 
-Returns **[number][113]** 
+Returns **[number][101]** 
 
 ## computeBounds
 
-[packages/core/src/reducer/editable/helper/sizing.js:42-51][151]
+[packages/core/src/reducer/editable/helper/sizing.js:42-51][132]
 
 Updates each cell's size boundaries.
 
 **Parameters**
 
--   `cells` **[Array][150]&lt;Cell>**  (optional, default `[]`)
+-   `cells` **[Array][131]&lt;Cell>**  (optional, default `[]`)
 
-Returns **[Array][150]&lt;Cell>** 
+Returns **[Array][131]&lt;Cell>** 
 
 ## computeResizeable
 
-[packages/core/src/reducer/editable/helper/sizing.js:56-62][152]
+[packages/core/src/reducer/editable/helper/sizing.js:56-62][133]
 
 Computes if a cell is resizable.
 
 **Parameters**
 
--   `cells` **[Array][150]&lt;Cell>**  (optional, default `[]`)
+-   `cells` **[Array][131]&lt;Cell>**  (optional, default `[]`)
 
-Returns **[Array][150]&lt;Cell>** 
+Returns **[Array][131]&lt;Cell>** 
 
 ## computeInlines
 
-[packages/core/src/reducer/editable/helper/sizing.js:67-94][153]
+[packages/core/src/reducer/editable/helper/sizing.js:67-94][134]
 
 Computes sizes an inline element was found.
 
 **Parameters**
 
--   `cells` **[Array][150]&lt;Cell>**  (optional, default `[]`)
+-   `cells` **[Array][131]&lt;Cell>**  (optional, default `[]`)
 
-Returns **[Array][150]&lt;Cell>** 
+Returns **[Array][131]&lt;Cell>** 
 
 ## resizeCells
 
-[packages/core/src/reducer/editable/helper/sizing.js:99-117][154]
+[packages/core/src/reducer/editable/helper/sizing.js:99-117][135]
 
 Resize cells.
 
 **Parameters**
 
--   `cells` **[Array][150]&lt;Cell>**  (optional, default `[]`)
+-   `cells` **[Array][131]&lt;Cell>**  (optional, default `[]`)
 -   `$1` **any** 
     -   `$1.id`  
     -   `$1.size`  
 
-Returns **[Array][150]&lt;Cell>** 
+Returns **[Array][131]&lt;Cell>** 
 
 ## computeSizes
 
-[packages/core/src/reducer/editable/helper/sizing.js:125-138][155]
+[packages/core/src/reducer/editable/helper/sizing.js:125-138][136]
 
 Balance cell sizes.
 
@@ -644,267 +611,92 @@ Balance cell sizes.
 
 Returns **\[...cell]** 
 
-## classes
+## generateMissingIds
 
-[packages/core/src/service/hover/index.js:68-90][156]
+[packages/core/src/service/plugin/index.js:38-48][137]
 
-NO (None): No drop zone.
-
-Corners are counted clockwise, beginning top left
-C1 (Corner top left): Position decided by top left corner function
-C2 (Corner top right): Position decided by top right corner function
-C3 (Corner bottom right): Position decided by bottom right corner function
-C4 (Corner bottom left): Position decided by bottom left corner function
-
-Above:
-AH (Above here): above, same level
-AA (Above of self or some ancestor): Above, compute active level using classification functions, e.g. log, sin, mx + t
-
-Below:
-BH (Below here)
-BA (Below of self or some ancestor)
-
-Left of:
-LH (Left of here)
-LA (Left of self or some ancestor)
-
-Right of:
-RH (Right of here)
-RA (Right of self or some ancestor)
-
-Inside / inline
-IL (Inline left)
-IR (Inline right)
-
-Type: {}
-
-## defaultMatrices
-
-[packages/core/src/service/hover/index.js:99-132][157]
-
-A list of matrices that are used to define the callback function.
-
-Type: MatrixList
-
-## 
-
-[packages/core/src/service/hover/index.js:99-132][157]
-
-Computes the average width and height for cells in a room.
+Iterate through an editable content tree and generate ids where missing.
 
 **Parameters**
 
--   `room`  
--   `matrix`  
+-   `props` **[Object][128]** 
 
-Returns **{x: [number][113], y: [number][113]}** 
+Returns **[Object][128]** 
 
-## getMouseHoverCell
+## PluginService
 
-[packages/core/src/service/hover/index.js:166-175][158]
+[packages/core/src/service/plugin/index.js:53-323][138]
 
-Returns the index of the hover cell.
-
-**Parameters**
-
--   `$0` **any** 
-    -   `$0.mouse`  
-    -   `$0.scale`  
--   `mouse`  
--   `scale`  
-
-Returns **MatrixIndex** 
-
-## last
-
-[packages/core/src/service/hover/index.js:180-180][159]
-
-Used for caching.
-
-## relativeMousePosition
-
-[packages/core/src/service/hover/index.js:259-270][160]
-
-Return the mouse position relative to the cell.
+PluginService is a registry of all content and layout plugins known to the editor.
 
 **Parameters**
 
--   `$0` **any** 
-    -   `$0.mouse`  
-    -   `$0.position`  
-    -   `$0.scale`  
+-   `$0` **any**  (optional, default `{}`)
+    -   `$0.content`   (optional, default `[]`)
+    -   `$0.layout`   (optional, default `[]`)
+    -   `$0.native`  
 
-## computeLevel
+### findLayoutPlugin
 
-[packages/core/src/service/hover/index.js:275-300][161]
+[packages/core/src/service/plugin/index.js:142-155][139]
 
-Computes the drop level based on the mouse position and the cell width.
+Finds a layout plugin based on its name and version.
 
-**Parameters**
+### findContentPlugin
 
--   `$0` **any** 
-    -   `$0.size`  
-    -   `$0.levels`  
-    -   `$0.position`  
+[packages/core/src/service/plugin/index.js:160-173][140]
 
-## computeHorizontal
+Finds a content plugin based on its name and version.
 
-[packages/core/src/service/hover/index.js:313-347][162]
+### getRegisteredNames
 
-Computes the horizontal drop level based on the mouse position.
+[packages/core/src/service/plugin/index.js:178-181][141]
 
-**Parameters**
-
--   `$0` **any** 
-    -   `$0.mouse`  
-    -   `$0.position`  
-    -   `$0.hover`  
-    -   `$0.scale`  
-    -   `$0.level`  
--   `inv` **[boolean][148]** returns the inverse drop level. Usually true for left and above drop level computation.
--   `mouse`  
--   `position`  
--   `hover`  
--   `scale`  
--   `level`  
-
-Returns **any** number
-
-## computeVertical
-
-[packages/core/src/service/hover/index.js:354-388][163]
-
-Computes the vertical drop level based on the mouse position.
-
-**Parameters**
-
--   `$0` **any** 
-    -   `$0.level`  
-    -   `$0.mouse`  
-    -   `$0.hover`  
-    -   `$0.position`  
-    -   `$0.scale`  
--   `inv` **[boolean][148]**  (optional, default `false`)
-
-Returns **any** number
-
-## HoverService
-
-[packages/core/src/service/hover/index.js:395-649][164]
-
-The HoverService uses callbacks and matrices to compute hover logic.
-
-## defaultCallbacks
-
-[packages/core/src/service/hover/index.js:395-649][164]
-
-A list of callbacks.
-
-Type: CallbackList
-
-## warn
-
-[packages/core/src/service/logger/index.js:39-41][165]
-
-Logs a warning. Warnings are things that are exceptional, but easily to recover from.
-
-**Parameters**
-
--   `args` **...[Array][150]&lt;any>** 
-
-## debug
-
-[packages/core/src/service/logger/index.js:46-48][166]
-
-Logs a debug message. Debug messages are things that help developers debugging things.
-
-**Parameters**
-
--   `args` **...[Array][150]&lt;any>** 
-
-## info
-
-[packages/core/src/service/logger/index.js:53-55][167]
-
-Logs an info. Infos are things that might be interesting for someone who needs to take a closer look.
-
-**Parameters**
-
--   `args` **...[Array][150]&lt;any>** 
-
-## error
-
-[packages/core/src/service/logger/index.js:60-63][168]
-
-Logs an error. Error are things that are exceptional, but can be recovered from.
-
-**Parameters**
-
--   `args` **...[Array][150]&lt;any>** 
-
-## fatal
-
-[packages/core/src/service/logger/index.js:68-72][169]
-
-Logs a fatal error. Fatal errors are things that are exceptional and can not be recovered from.
-
-**Parameters**
-
--   `args` **...[Array][150]&lt;any>** 
-
-## log
-
-[packages/core/src/service/logger/index.js:77-80][170]
-
-Logs a message.
-
-**Parameters**
-
--   `args` **...[Array][150]&lt;any>** 
+Returns a list of all known plugin names.
 
 ## id
 
-[packages/core/src/service/plugin/classes.js:32-32][171]
+[packages/core/src/service/plugin/classes.js:32-32][142]
 
 ## id
 
-[packages/core/src/service/plugin/classes.js:71-71][172]
+[packages/core/src/service/plugin/classes.js:71-71][143]
 
 ## readOnly
 
-[packages/core/src/service/plugin/classes.js:37-37][173]
+[packages/core/src/service/plugin/classes.js:37-37][144]
 
 ## readOnly
 
-[packages/core/src/service/plugin/classes.js:76-76][174]
+[packages/core/src/service/plugin/classes.js:76-76][145]
 
 ## name
 
-[packages/core/src/service/plugin/classes.js:42-42][175]
+[packages/core/src/service/plugin/classes.js:42-42][146]
 
 ## version
 
-[packages/core/src/service/plugin/classes.js:47-47][176]
+[packages/core/src/service/plugin/classes.js:47-47][147]
 
 ## focused
 
-[packages/core/src/service/plugin/classes.js:52-52][177]
+[packages/core/src/service/plugin/classes.js:52-52][148]
 
 ## focused
 
-[packages/core/src/service/plugin/classes.js:81-81][178]
+[packages/core/src/service/plugin/classes.js:81-81][149]
 
 ## state
 
-[packages/core/src/service/plugin/classes.js:57-57][179]
+[packages/core/src/service/plugin/classes.js:57-57][150]
 
 ## state
 
-[packages/core/src/service/plugin/classes.js:86-86][180]
+[packages/core/src/service/plugin/classes.js:86-86][151]
 
 ## onChange
 
-[packages/core/src/service/plugin/classes.js:64-64][181]
+[packages/core/src/service/plugin/classes.js:64-64][152]
 
 Should be called with the new state if the plugin's state changes.
 
@@ -914,7 +706,7 @@ Should be called with the new state if the plugin's state changes.
 
 ## onChange
 
-[packages/core/src/service/plugin/classes.js:93-93][182]
+[packages/core/src/service/plugin/classes.js:93-93][153]
 
 Should be called with the new state if the plugin's state changes.
 
@@ -924,7 +716,7 @@ Should be called with the new state if the plugin's state changes.
 
 ## Migration
 
-[packages/core/src/service/plugin/classes.js:99-123][183]
+[packages/core/src/service/plugin/classes.js:99-123][154]
 
 **Parameters**
 
@@ -932,7 +724,7 @@ Should be called with the new state if the plugin's state changes.
 
 ## Plugin
 
-[packages/core/src/service/plugin/classes.js:128-301][184]
+[packages/core/src/service/plugin/classes.js:128-301][155]
 
 **Parameters**
 
@@ -940,55 +732,55 @@ Should be called with the new state if the plugin's state changes.
 
 ### name
 
-[packages/core/src/service/plugin/classes.js:188-188][185]
+[packages/core/src/service/plugin/classes.js:188-188][156]
 
-Type: [string][109]
+Type: [string][96]
 
 ### description
 
-[packages/core/src/service/plugin/classes.js:193-193][186]
+[packages/core/src/service/plugin/classes.js:193-193][157]
 
-Type: [string][109]
+Type: [string][96]
 
 ### migrations
 
-[packages/core/src/service/plugin/classes.js:198-198][187]
+[packages/core/src/service/plugin/classes.js:198-198][158]
 
-Type: [Array][150]&lt;[Migration][188]>
+Type: [Array][131]&lt;[Migration][159]>
 
 ### version
 
-[packages/core/src/service/plugin/classes.js:203-203][189]
+[packages/core/src/service/plugin/classes.js:203-203][160]
 
-Type: [string][109]
+Type: [string][96]
 
 ### IconComponent
 
-[packages/core/src/service/plugin/classes.js:208-208][190]
+[packages/core/src/service/plugin/classes.js:208-208][161]
 
 Type: any
 
 ### Component
 
-[packages/core/src/service/plugin/classes.js:214-214][191]
+[packages/core/src/service/plugin/classes.js:214-214][162]
 
 Type: any
 
 ### StaticComponent
 
-[packages/core/src/service/plugin/classes.js:220-220][192]
+[packages/core/src/service/plugin/classes.js:220-220][163]
 
 Type: any
 
 ### text
 
-[packages/core/src/service/plugin/classes.js:225-225][193]
+[packages/core/src/service/plugin/classes.js:225-225][164]
 
-Type: [string][109]
+Type: [string][96]
 
 ### serialize
 
-[packages/core/src/service/plugin/classes.js:233-233][194]
+[packages/core/src/service/plugin/classes.js:233-233][165]
 
 Serialize a the plugin state
 
@@ -1000,7 +792,7 @@ Returns **any** the serialized state.
 
 ### unserialize
 
-[packages/core/src/service/plugin/classes.js:241-241][195]
+[packages/core/src/service/plugin/classes.js:241-241][166]
 
 Unserialize the plugin state.
 
@@ -1012,7 +804,7 @@ Returns **any** the unserialized state.
 
 ### handleRemoveHotKey
 
-[packages/core/src/service/plugin/classes.js:251-252][196]
+[packages/core/src/service/plugin/classes.js:251-252][167]
 
 Will be called when the user presses the delete key. When returning a resolving promise,
 the cell will be removed. If the promise is rejected, nothing happens.
@@ -1026,7 +818,7 @@ Returns **any** a promise
 
 ### handleFocusNextHotKey
 
-[packages/core/src/service/plugin/classes.js:262-265][197]
+[packages/core/src/service/plugin/classes.js:262-265][168]
 
 Will be called when the user presses the right or down key. When returning a resolving promise,
 the next cell will be focused. If the promise is rejected, focus stays the same.
@@ -1040,7 +832,7 @@ Returns **any** a promise
 
 ### handleFocusPreviousHotKey
 
-[packages/core/src/service/plugin/classes.js:275-278][198]
+[packages/core/src/service/plugin/classes.js:275-278][169]
 
 Will be called when the user presses the left or up key. When returning a resolving promise,
 the next cell will be focused. If the promise is rejected, focus stays the same.
@@ -1054,7 +846,7 @@ Returns **any** a promise
 
 ### handleFocus
 
-[packages/core/src/service/plugin/classes.js:285-285][199]
+[packages/core/src/service/plugin/classes.js:285-285][170]
 
 This function will be called when one of the plugin's cell is blurred.
 
@@ -1064,7 +856,7 @@ This function will be called when one of the plugin's cell is blurred.
 
 ### handleBlur
 
-[packages/core/src/service/plugin/classes.js:292-292][200]
+[packages/core/src/service/plugin/classes.js:292-292][171]
 
 This function will be called when one of the plugin's cell is focused.
 
@@ -1074,7 +866,7 @@ This function will be called when one of the plugin's cell is focused.
 
 ### reducer
 
-[packages/core/src/service/plugin/classes.js:300-300][201]
+[packages/core/src/service/plugin/classes.js:300-300][172]
 
 Specify a custom reducer for the plugin's cell.
 
@@ -1085,7 +877,7 @@ Specify a custom reducer for the plugin's cell.
 
 ## ContentPlugin
 
-[packages/core/src/service/plugin/classes.js:306-346][202]
+[packages/core/src/service/plugin/classes.js:306-346][173]
 
 **Extends Plugin**
 
@@ -1095,19 +887,19 @@ Specify a custom reducer for the plugin's cell.
 
 ### isInlineable
 
-[packages/core/src/service/plugin/classes.js:325-325][203]
+[packages/core/src/service/plugin/classes.js:325-325][174]
 
-Type: [boolean][148]
+Type: [boolean][129]
 
 ### allowInlineNeighbours
 
-[packages/core/src/service/plugin/classes.js:330-330][204]
+[packages/core/src/service/plugin/classes.js:330-330][175]
 
-Type: [boolean][148]
+Type: [boolean][129]
 
 ### createInitialState
 
-[packages/core/src/service/plugin/classes.js:337-337][205]
+[packages/core/src/service/plugin/classes.js:337-337][176]
 
 Create the plugin's initial state.
 
@@ -1115,7 +907,7 @@ Returns **any** the initial state.
 
 ### reducer
 
-[packages/core/src/service/plugin/classes.js:345-345][206]
+[packages/core/src/service/plugin/classes.js:345-345][177]
 
 Specify a custom reducer for the plugin's cell.
 
@@ -1126,7 +918,7 @@ Specify a custom reducer for the plugin's cell.
 
 ## LayoutPlugin
 
-[packages/core/src/service/plugin/classes.js:351-377][207]
+[packages/core/src/service/plugin/classes.js:351-377][178]
 
 **Extends Plugin**
 
@@ -1136,7 +928,7 @@ Specify a custom reducer for the plugin's cell.
 
 ### createInitialState
 
-[packages/core/src/service/plugin/classes.js:369-369][208]
+[packages/core/src/service/plugin/classes.js:369-369][179]
 
 Create the plugin's initial state.
 
@@ -1144,7 +936,7 @@ Returns **any** the initial state.
 
 ### createInitialChildren
 
-[packages/core/src/service/plugin/classes.js:376-376][209]
+[packages/core/src/service/plugin/classes.js:376-376][180]
 
 Create the plugin's initial children (rows/cells).
 
@@ -1152,13 +944,13 @@ Returns **any** the initial state.
 
 ## type
 
-[packages/core/src/service/plugin/classes.js:404-404][210]
+[packages/core/src/service/plugin/classes.js:404-404][181]
 
-Type: [string][109]
+Type: [string][96]
 
 ## createInitialChildren
 
-[packages/core/src/service/plugin/classes.js:411-411][211]
+[packages/core/src/service/plugin/classes.js:411-411][182]
 
 Create the plugin's initial children (rows/cells).
 
@@ -1166,516 +958,390 @@ Returns **any** the initial state.
 
 ## isInlineable
 
-[packages/core/src/service/plugin/classes.js:416-416][212]
+[packages/core/src/service/plugin/classes.js:416-416][183]
 
-Type: [boolean][148]
+Type: [boolean][129]
 
 ## allowInlineNeighbours
 
-[packages/core/src/service/plugin/classes.js:421-421][213]
+[packages/core/src/service/plugin/classes.js:421-421][184]
 
-Type: [boolean][148]
+Type: [boolean][129]
 
 ## createInitialState
 
-[packages/core/src/service/plugin/classes.js:428-428][214]
+[packages/core/src/service/plugin/classes.js:428-428][185]
 
 Create the plugin's initial state.
 
 Returns **any** the initial state.
 
-## generateMissingIds
+[1]: #insertmode
 
-[packages/core/src/service/plugin/index.js:38-48][215]
+[2]: #editmode
 
-Iterate through an editable content tree and generate ids where missing.
+[3]: #previewmode
 
-**Parameters**
+[4]: #layoutmode
 
--   `props` **[Object][147]** 
+[5]: #resizemode
 
-Returns **[Object][147]** 
+[6]: #previousmode
 
-## PluginService
+[7]: #updatecellcontent
 
-[packages/core/src/service/plugin/index.js:53-323][216]
+[8]: #updatecelllayout
 
-PluginService is a registry of all content and layout plugins known to the editor.
+[9]: #removecell
 
-**Parameters**
+[10]: #resizecell
 
--   `$0` **any**  (optional, default `{}`)
-    -   `$0.content`   (optional, default `[]`)
-    -   `$0.layout`   (optional, default `[]`)
-    -   `$0.native`  
+[11]: #focuscell
 
-### findLayoutPlugin
+[12]: #focusnextcell
 
-[packages/core/src/service/plugin/index.js:142-155][217]
+[13]: #focuspreviouscell
 
-Finds a layout plugin based on its name and version.
+[14]: #blurcell
 
-### findContentPlugin
+[15]: #blurallcells
 
-[packages/core/src/service/plugin/index.js:160-173][218]
+[16]: #createfallbackcell
 
-Finds a content plugin based on its name and version.
+[17]: #srceditoractionscelldrag
 
-### getRegisteredNames
+[18]: #cellhover
 
-[packages/core/src/service/plugin/index.js:178-181][219]
+[19]: #cellhoverleftof
 
-Returns a list of all known plugin names.
+[20]: #cellhoverrightof
 
-## store
+[21]: #cellhoverabove
 
-[packages/core/src/store.js:32-46][220]
+[22]: #cellhoverbelow
 
-Returns a new redux store.
+[23]: #cellhoverinlineleft
 
-**Parameters**
+[24]: #cellhoverinlineright
 
--   `initialState` **[Object][147]** 
--   `middleware` **\[]**  (optional, default `[]`)
+[25]: #dragcell
 
-Returns **Store** 
+[26]: #clearhover
 
-[1]: #updatecellcontent
+[27]: #cancelcelldrag
 
-[2]: #updatecelllayout
+[28]: #positions
 
-[3]: #removecell
+[29]: #insertcellbelow
 
-[4]: #resizecell
+[30]: #insertcellabove
 
-[5]: #focuscell
+[31]: #insertcellrightof
 
-[6]: #focusnextcell
+[32]: #insertcellleftof
 
-[7]: #focuspreviouscell
+[33]: #insertcellleftinline
 
-[8]: #blurcell
+[34]: #insertcellrightinline
 
-[9]: #blurallcells
+[35]: #ishoveringthis
 
-[10]: #createfallbackcell
+[36]: #sumsizes
 
-[11]: #srceditoractionscelldrag
+[37]: #computebounds
 
-[12]: #cellhover
+[38]: #computeresizeable
 
-[13]: #cellhoverleftof
+[39]: #computeinlines
 
-[14]: #cellhoverrightof
+[40]: #resizecells
 
-[15]: #cellhoverabove
+[41]: #computesizes
 
-[16]: #cellhoverbelow
+[42]: #generatemissingids
 
-[17]: #cellhoverinlineleft
+[43]: #pluginservice
 
-[18]: #cellhoverinlineright
+[44]: #findlayoutplugin
 
-[19]: #dragcell
+[45]: #findcontentplugin
 
-[20]: #clearhover
+[46]: #getregisterednames
 
-[21]: #cancelcelldrag
+[47]: #id
 
-[22]: #insertcellbelow
+[48]: #id-1
 
-[23]: #insertcellabove
+[49]: #readonly
 
-[24]: #insertcellrightof
+[50]: #readonly-1
 
-[25]: #insertcellleftof
+[51]: #name
 
-[26]: #insertcellleftinline
+[52]: #version
 
-[27]: #insertcellrightinline
+[53]: #focused
 
-[28]: #insertmode
+[54]: #focused-1
 
-[29]: #editmode
+[55]: #state
 
-[30]: #previewmode
+[56]: #state-1
 
-[31]: #layoutmode
+[57]: #onchange
 
-[32]: #resizemode
+[58]: #onchange-1
 
-[33]: #previousmode
+[59]: #migration
 
-[34]: #positions
+[60]: #plugin
 
-[35]: #editor
+[61]: #name-1
 
-[36]: #ishoveringthis
+[62]: #description
 
-[37]: #sumsizes
+[63]: #migrations
 
-[38]: #computebounds
+[64]: #version-1
 
-[39]: #computeresizeable
+[65]: #iconcomponent
 
-[40]: #computeinlines
+[66]: #component
 
-[41]: #resizecells
+[67]: #staticcomponent
 
-[42]: #computesizes
+[68]: #text
 
-[43]: #classes
+[69]: #serialize
 
-[44]: #defaultmatrices
+[70]: #unserialize
 
-[45]: #getmousehovercell
+[71]: #handleremovehotkey
 
-[46]: #last
+[72]: #handlefocusnexthotkey
 
-[47]: #relativemouseposition
+[73]: #handlefocusprevioushotkey
 
-[48]: #computelevel
+[74]: #handlefocus
 
-[49]: #computehorizontal
+[75]: #handleblur
 
-[50]: #computevertical
+[76]: #reducer
 
-[51]: #hoverservice
+[77]: #contentplugin
 
-[52]: #defaultcallbacks
+[78]: #isinlineable
 
-[53]: #warn
+[79]: #allowinlineneighbours
 
-[54]: #debug
+[80]: #createinitialstate
 
-[55]: #info
+[81]: #reducer-1
 
-[56]: #error
+[82]: #layoutplugin
 
-[57]: #fatal
+[83]: #createinitialstate-1
 
-[58]: #log
+[84]: #createinitialchildren
 
-[59]: #id
+[85]: #type
 
-[60]: #id-1
+[86]: #createinitialchildren-1
 
-[61]: #readonly
+[87]: #isinlineable-1
 
-[62]: #readonly-1
+[88]: #allowinlineneighbours-1
 
-[63]: #name
+[89]: #createinitialstate-2
 
-[64]: #version
+[90]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/display.js#L48-L48 "Source code on GitHub"
 
-[65]: #focused
+[91]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/display.js#L53-L53 "Source code on GitHub"
 
-[66]: #focused-1
+[92]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/display.js#L58-L58 "Source code on GitHub"
 
-[67]: #state
+[93]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/display.js#L63-L63 "Source code on GitHub"
 
-[68]: #state-1
+[94]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/display.js#L68-L68 "Source code on GitHub"
 
-[69]: #onchange
+[95]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/display.js#L73-L76 "Source code on GitHub"
 
-[70]: #onchange-1
+[96]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[71]: #migration
+[97]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L50-L55 "Source code on GitHub"
 
-[72]: #plugin
+[98]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L68-L73 "Source code on GitHub"
 
-[73]: #name-1
+[99]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L87-L92 "Source code on GitHub"
 
-[74]: #description
+[100]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L106-L111 "Source code on GitHub"
 
-[75]: #migrations
+[101]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[76]: #version-1
+[102]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
 
-[77]: #iconcomponent
+[103]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L116-L123 "Source code on GitHub"
 
-[78]: #component
+[104]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L128-L132 "Source code on GitHub"
 
-[79]: #staticcomponent
+[105]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L137-L141 "Source code on GitHub"
 
-[80]: #text
+[106]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L146-L150 "Source code on GitHub"
 
-[81]: #serialize
+[107]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L155-L158 "Source code on GitHub"
 
-[82]: #unserialize
+[108]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/core.js#L163-L169 "Source code on GitHub"
 
-[83]: #handleremovehotkey
+[109]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L28-L28 "Source code on GitHub"
 
-[84]: #handlefocusnexthotkey
+[110]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L50-L62 "Source code on GitHub"
 
-[85]: #handlefocusprevioushotkey
+[111]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L76-L77 "Source code on GitHub"
 
-[86]: #handlefocus
+[112]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L91-L92 "Source code on GitHub"
 
-[87]: #handleblur
+[113]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L106-L107 "Source code on GitHub"
 
-[88]: #reducer
+[114]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L121-L122 "Source code on GitHub"
 
-[89]: #contentplugin
+[115]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L135-L136 "Source code on GitHub"
 
-[90]: #isinlineable
+[116]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L149-L150 "Source code on GitHub"
 
-[91]: #allowinlineneighbours
+[117]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L163-L167 "Source code on GitHub"
 
-[92]: #createinitialstate
+[118]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L174-L177 "Source code on GitHub"
 
-[93]: #reducer-1
+[119]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/drag.js#L190-L193 "Source code on GitHub"
 
-[94]: #layoutplugin
+[120]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/const.js#L26-L33 "Source code on GitHub"
 
-[95]: #createinitialstate-1
+[121]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/insert.js#L82-L82 "Source code on GitHub"
 
-[96]: #createinitialchildren
+[122]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/insert.js#L87-L87 "Source code on GitHub"
 
-[97]: #type
+[123]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/insert.js#L92-L92 "Source code on GitHub"
 
-[98]: #createinitialchildren-1
+[124]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/insert.js#L97-L97 "Source code on GitHub"
 
-[99]: #isinlineable-1
+[125]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/insert.js#L102-L102 "Source code on GitHub"
 
-[100]: #allowinlineneighbours-1
+[126]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/actions/cell/insert.js#L107-L107 "Source code on GitHub"
 
-[101]: #createinitialstate-2
+[127]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/reducer/editable/helper/hover.js#L28-L40 "Source code on GitHub"
 
-[102]: #generatemissingids
+[128]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[103]: #pluginservice
+[129]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[104]: #findlayoutplugin
+[130]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/reducer/editable/helper/sizing.js#L31-L37 "Source code on GitHub"
 
-[105]: #findcontentplugin
+[131]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[106]: #getregisterednames
+[132]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/reducer/editable/helper/sizing.js#L42-L51 "Source code on GitHub"
 
-[107]: #store
+[133]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/reducer/editable/helper/sizing.js#L56-L62 "Source code on GitHub"
 
-[108]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L50-L55 "Source code on GitHub"
+[134]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/reducer/editable/helper/sizing.js#L67-L94 "Source code on GitHub"
 
-[109]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[135]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/reducer/editable/helper/sizing.js#L99-L117 "Source code on GitHub"
 
-[110]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L68-L73 "Source code on GitHub"
+[136]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/reducer/editable/helper/sizing.js#L125-L138 "Source code on GitHub"
 
-[111]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L87-L92 "Source code on GitHub"
+[137]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/index.js#L38-L48 "Source code on GitHub"
 
-[112]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L106-L111 "Source code on GitHub"
+[138]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/index.js#L53-L323 "Source code on GitHub"
 
-[113]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[139]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/index.js#L142-L155 "Source code on GitHub"
 
-[114]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+[140]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/index.js#L160-L173 "Source code on GitHub"
 
-[115]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L116-L123 "Source code on GitHub"
+[141]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/index.js#L178-L181 "Source code on GitHub"
 
-[116]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L128-L132 "Source code on GitHub"
+[142]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L32-L32 "Source code on GitHub"
 
-[117]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L137-L141 "Source code on GitHub"
+[143]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L71-L71 "Source code on GitHub"
 
-[118]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L146-L150 "Source code on GitHub"
+[144]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L37-L37 "Source code on GitHub"
 
-[119]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L155-L158 "Source code on GitHub"
+[145]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L76-L76 "Source code on GitHub"
 
-[120]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/core.js#L163-L169 "Source code on GitHub"
+[146]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L42-L42 "Source code on GitHub"
 
-[121]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L28-L28 "Source code on GitHub"
+[147]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L47-L47 "Source code on GitHub"
 
-[122]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L50-L62 "Source code on GitHub"
+[148]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L52-L52 "Source code on GitHub"
 
-[123]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L76-L77 "Source code on GitHub"
+[149]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L81-L81 "Source code on GitHub"
 
-[124]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L91-L92 "Source code on GitHub"
+[150]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L57-L57 "Source code on GitHub"
 
-[125]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L106-L107 "Source code on GitHub"
+[151]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L86-L86 "Source code on GitHub"
 
-[126]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L121-L122 "Source code on GitHub"
+[152]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L64-L64 "Source code on GitHub"
 
-[127]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L135-L136 "Source code on GitHub"
+[153]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L93-L93 "Source code on GitHub"
 
-[128]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L149-L150 "Source code on GitHub"
+[154]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L99-L123 "Source code on GitHub"
 
-[129]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L163-L167 "Source code on GitHub"
+[155]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L128-L301 "Source code on GitHub"
 
-[130]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L174-L177 "Source code on GitHub"
+[156]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L188-L188 "Source code on GitHub"
 
-[131]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/drag.js#L190-L193 "Source code on GitHub"
+[157]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L193-L193 "Source code on GitHub"
 
-[132]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/insert.js#L82-L82 "Source code on GitHub"
+[158]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L198-L198 "Source code on GitHub"
 
-[133]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/insert.js#L87-L87 "Source code on GitHub"
+[159]: #migration
 
-[134]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/insert.js#L92-L92 "Source code on GitHub"
+[160]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L203-L203 "Source code on GitHub"
 
-[135]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/insert.js#L97-L97 "Source code on GitHub"
+[161]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L208-L208 "Source code on GitHub"
 
-[136]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/insert.js#L102-L102 "Source code on GitHub"
+[162]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L214-L214 "Source code on GitHub"
 
-[137]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/cell/insert.js#L107-L107 "Source code on GitHub"
+[163]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L220-L220 "Source code on GitHub"
 
-[138]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/display.js#L48-L48 "Source code on GitHub"
+[164]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L225-L225 "Source code on GitHub"
 
-[139]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/display.js#L53-L53 "Source code on GitHub"
+[165]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L233-L233 "Source code on GitHub"
 
-[140]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/display.js#L58-L58 "Source code on GitHub"
+[166]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L241-L241 "Source code on GitHub"
 
-[141]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/display.js#L63-L63 "Source code on GitHub"
+[167]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L251-L252 "Source code on GitHub"
 
-[142]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/display.js#L68-L68 "Source code on GitHub"
+[168]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L262-L265 "Source code on GitHub"
 
-[143]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/actions/display.js#L73-L76 "Source code on GitHub"
+[169]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L275-L278 "Source code on GitHub"
 
-[144]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/const.js#L26-L33 "Source code on GitHub"
+[170]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L285-L285 "Source code on GitHub"
 
-[145]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/index.js#L72-L154 "Source code on GitHub"
+[171]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L292-L292 "Source code on GitHub"
 
-[146]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/reducer/editable/helper/hover.js#L28-L40 "Source code on GitHub"
+[172]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L300-L300 "Source code on GitHub"
 
-[147]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[173]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L306-L346 "Source code on GitHub"
 
-[148]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[174]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L325-L325 "Source code on GitHub"
 
-[149]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/reducer/editable/helper/sizing.js#L31-L37 "Source code on GitHub"
+[175]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L330-L330 "Source code on GitHub"
 
-[150]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[176]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L337-L337 "Source code on GitHub"
 
-[151]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/reducer/editable/helper/sizing.js#L42-L51 "Source code on GitHub"
+[177]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L345-L345 "Source code on GitHub"
 
-[152]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/reducer/editable/helper/sizing.js#L56-L62 "Source code on GitHub"
+[178]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L351-L377 "Source code on GitHub"
 
-[153]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/reducer/editable/helper/sizing.js#L67-L94 "Source code on GitHub"
+[179]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L369-L369 "Source code on GitHub"
 
-[154]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/reducer/editable/helper/sizing.js#L99-L117 "Source code on GitHub"
+[180]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L376-L376 "Source code on GitHub"
 
-[155]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/reducer/editable/helper/sizing.js#L125-L138 "Source code on GitHub"
+[181]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L404-L404 "Source code on GitHub"
 
-[156]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L68-L90 "Source code on GitHub"
+[182]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L411-L411 "Source code on GitHub"
 
-[157]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L99-L132 "Source code on GitHub"
+[183]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L416-L416 "Source code on GitHub"
 
-[158]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L166-L175 "Source code on GitHub"
+[184]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L421-L421 "Source code on GitHub"
 
-[159]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L180-L180 "Source code on GitHub"
-
-[160]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L259-L270 "Source code on GitHub"
-
-[161]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L275-L300 "Source code on GitHub"
-
-[162]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L313-L347 "Source code on GitHub"
-
-[163]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L354-L388 "Source code on GitHub"
-
-[164]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/hover/index.js#L395-L649 "Source code on GitHub"
-
-[165]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/logger/index.js#L39-L41 "Source code on GitHub"
-
-[166]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/logger/index.js#L46-L48 "Source code on GitHub"
-
-[167]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/logger/index.js#L53-L55 "Source code on GitHub"
-
-[168]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/logger/index.js#L60-L63 "Source code on GitHub"
-
-[169]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/logger/index.js#L68-L72 "Source code on GitHub"
-
-[170]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/logger/index.js#L77-L80 "Source code on GitHub"
-
-[171]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L32-L32 "Source code on GitHub"
-
-[172]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L71-L71 "Source code on GitHub"
-
-[173]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L37-L37 "Source code on GitHub"
-
-[174]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L76-L76 "Source code on GitHub"
-
-[175]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L42-L42 "Source code on GitHub"
-
-[176]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L47-L47 "Source code on GitHub"
-
-[177]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L52-L52 "Source code on GitHub"
-
-[178]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L81-L81 "Source code on GitHub"
-
-[179]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L57-L57 "Source code on GitHub"
-
-[180]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L86-L86 "Source code on GitHub"
-
-[181]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L64-L64 "Source code on GitHub"
-
-[182]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L93-L93 "Source code on GitHub"
-
-[183]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L99-L123 "Source code on GitHub"
-
-[184]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L128-L301 "Source code on GitHub"
-
-[185]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L188-L188 "Source code on GitHub"
-
-[186]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L193-L193 "Source code on GitHub"
-
-[187]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L198-L198 "Source code on GitHub"
-
-[188]: #migration
-
-[189]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L203-L203 "Source code on GitHub"
-
-[190]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L208-L208 "Source code on GitHub"
-
-[191]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L214-L214 "Source code on GitHub"
-
-[192]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L220-L220 "Source code on GitHub"
-
-[193]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L225-L225 "Source code on GitHub"
-
-[194]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L233-L233 "Source code on GitHub"
-
-[195]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L241-L241 "Source code on GitHub"
-
-[196]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L251-L252 "Source code on GitHub"
-
-[197]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L262-L265 "Source code on GitHub"
-
-[198]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L275-L278 "Source code on GitHub"
-
-[199]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L285-L285 "Source code on GitHub"
-
-[200]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L292-L292 "Source code on GitHub"
-
-[201]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L300-L300 "Source code on GitHub"
-
-[202]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L306-L346 "Source code on GitHub"
-
-[203]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L325-L325 "Source code on GitHub"
-
-[204]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L330-L330 "Source code on GitHub"
-
-[205]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L337-L337 "Source code on GitHub"
-
-[206]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L345-L345 "Source code on GitHub"
-
-[207]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L351-L377 "Source code on GitHub"
-
-[208]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L369-L369 "Source code on GitHub"
-
-[209]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L376-L376 "Source code on GitHub"
-
-[210]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L404-L404 "Source code on GitHub"
-
-[211]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L411-L411 "Source code on GitHub"
-
-[212]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L416-L416 "Source code on GitHub"
-
-[213]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L421-L421 "Source code on GitHub"
-
-[214]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/classes.js#L428-L428 "Source code on GitHub"
-
-[215]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/index.js#L38-L48 "Source code on GitHub"
-
-[216]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/index.js#L53-L323 "Source code on GitHub"
-
-[217]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/index.js#L142-L155 "Source code on GitHub"
-
-[218]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/index.js#L160-L173 "Source code on GitHub"
-
-[219]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/service/plugin/index.js#L178-L181 "Source code on GitHub"
-
-[220]: https://github.com/ory-am/editor/blob/ca2a6276b89b7282695673c40c7fe5205a0593e4/packages/core/src/store.js#L32-L46 "Source code on GitHub"
+[185]: https://github.com/nolandg/editor/blob/a87a5194c3e86dc8a63ed38392e2cc469807133b/packages/core/src/service/plugin/classes.js#L428-L428 "Source code on GitHub"

@@ -25,7 +25,7 @@
     "why-did-you-update": "0.0.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "",
     "build": "react-scripts build"
   }
 }
