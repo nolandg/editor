@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "author": "ORY GmbH",
   "license": "GNU Lesser General Public License v3.0",
   "devDependencies": {
@@ -28,8 +28,8 @@
     "react-scripts": "1.1.4",
     "rimraf": "^2.6.1",
     "unexpected": "^10.38.0",
-    "@material-ui/core": "^1.5.1",
-    "@material-ui/icons": "^2.0.3"
+    "@material-ui/core": "^3.0.3",
+    "@material-ui/icons": "^3.0.1"
   },
   "scripts": {
     "precommit": "npm-run-all prettier docs:api",
