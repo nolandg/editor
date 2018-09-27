@@ -16,4 +16,4 @@
 
 [1]: #index
 
-[2]: https://github.com/nolandg/editor/blob/1ccc01ed1da04fadb5413a4aa1a13dcc08bfb5e7/packages/plugins/content/native/src/index.js#L47-L58 "Source code on GitHub"
+[2]: https://github.com/nolandg/editor/blob/5860105349f851c6ae43bb25cd8c2c28e634fc5f/packages/plugins/content/native/src/index.js#L47-L58 "Source code on GitHub"
