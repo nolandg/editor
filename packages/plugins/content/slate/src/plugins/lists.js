@@ -27,7 +27,7 @@ import OrderedListIcon from '@material-ui/icons/FormatListNumbered'
 import IncreaseIndentIcon from '@material-ui/icons/FormatIndentIncrease'
 import DecreaseIndentIcon from '@material-ui/icons/FormatIndentDecrease'
 import type { Props } from './props'
-import createListPlugin from 'slate-edit-list'
+import createListPlugin from 'front-slate-edit-list'
 
 import { makeTagNode, ToolbarButton } from '../helpers'
 import Plugin from './Plugin'
