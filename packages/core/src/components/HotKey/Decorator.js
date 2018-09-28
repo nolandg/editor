@@ -149,9 +149,9 @@ class Decorator extends Component {
         return
       }
 
-      const result = this.props.searchNodeEverywhere(focus);
-      if(!result) return;
-      const { node: n, editable } = result;
+      const result = this.props.searchNodeEverywhere(focus)
+      if (!result) return
+      const { node: n, editable } = result
       hotKeyHandler(n, 'handleFocusNextHotKey')(e, n)
         .then(() => {
           const found = nextLeaf(editable.cellOrder, focus)
@@ -170,9 +170,9 @@ class Decorator extends Component {
         return
       }
 
-      const result = this.props.searchNodeEverywhere(focus);
-      if(!result) return;
-      const { node: n, editable } = result;
+      const result = this.props.searchNodeEverywhere(focus)
+      if (!result) return
+      const { node: n, editable } = result
       hotKeyHandler(n, 'handleFocusPreviousHotKey')(e, n)
         .then(() => {
           const found = previousLeaf(editable.cellOrder, focus)
