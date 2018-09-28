@@ -37,8 +37,7 @@ const theme = createMuiTheme(themeOptions)
 
 class ThemeProvider extends Component {
   render() {
-    console.log('ThemeProvider!')
-    return <React.Fragment>{this.props.children}</React.Fragment>
+    // return <React.Fragment>{this.props.children}</React.Fragment>
     // return (
     //   <JssProvider generateClassName={generateClassName}>
     //     <MuiThemeProvider theme={this.props.theme || theme}>
@@ -46,6 +45,13 @@ class ThemeProvider extends Component {
     //     </MuiThemeProvider>
     //   </JssProvider>
     // )
+    return (
+      // <JssProvider generateClassName={generateClassName}>
+        <MuiThemeProvider theme={this.props.theme || theme}>
+          {this.props.children}
+        </MuiThemeProvider>
+      // </JssProvider>
+    )
   }
 }
 
