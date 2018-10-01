@@ -57,7 +57,7 @@ class ImageUpload extends Component {
     buttonContent: 'Upload image',
     icon: <CloudUploadIcon style={{ marginLeft: '8px' }} />,
     allowedExtensions: ['jpg', 'jpeg', 'png'],
-    maxFileSize: 20e6,
+    maxFileSize: 20e6
   }
 
   hasExtension = (fileName: string) => {
