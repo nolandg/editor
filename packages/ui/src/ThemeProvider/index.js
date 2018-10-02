@@ -39,11 +39,11 @@ class ThemeProvider extends Component {
   render() {
     return (
       // <JssProvider generateClassName={generateClassName}>
-        <MuiThemeProvider theme={this.props.theme || theme}>
-          {this.props.children}
-        </MuiThemeProvider>
+      <MuiThemeProvider theme={this.props.theme || theme}>
+        {this.props.children}
+      </MuiThemeProvider>
       // </JssProvider>
-    );
+    )
   }
 }
 
