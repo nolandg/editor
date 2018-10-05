@@ -129,7 +129,7 @@ export default (plugins: Plugin[] = hooks.defaultPlugins) => {
     text: 'Text',
     description: 'An advanced rich text area.',
 
-    allowInlineNeighbours: true,
+    allowInlineNeighbours: false,
 
     handleFocus: (props: Props, source: string) => {
       if (source === 'onMouseDown') {

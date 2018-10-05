@@ -38,7 +38,7 @@ const imagePlugin = (settings?: ImagePluginSettings) => {
     version: '0.0.1',
     IconComponent: <Panorama />,
     text: 'Image',
-    isInlineable: true,
+    isInlineable: false,
     description: 'Loads an image from an url.',
 
     handleRemoveHotKey: (_: Event, __: ContentPluginProps<*>): Promise<*> =>
