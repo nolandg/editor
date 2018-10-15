@@ -34,8 +34,8 @@ export { darkTheme }
 const generateClassName = createGenerateClassName({ productionPrefix: 'ory' })
 export const themeOptions = {
   typography: {
-    useNextVariants: true,
-  },
+    useNextVariants: true
+  }
 }
 const theme = createMuiTheme(themeOptions)
 
