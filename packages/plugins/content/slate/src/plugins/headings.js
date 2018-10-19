@@ -78,14 +78,14 @@ export default class HeadingsPlugin extends Plugin {
   name = 'headings'
 
   schema = {
-    nodes: {
-      [H1]: makeTagNode('h1'),
-      [H2]: makeTagNode('h2'),
-      [H3]: makeTagNode('h3'),
-      [H4]: makeTagNode('h4'),
-      [H5]: makeTagNode('h5'),
-      [H6]: makeTagNode('h6')
-    }
+    // nodes: {
+    //   [H1]: makeTagNode('h1'),
+    //   [H2]: makeTagNode('h2'),
+    //   [H3]: makeTagNode('h3'),
+    //   [H4]: makeTagNode('h4'),
+    //   [H5]: makeTagNode('h5'),
+    //   [H6]: makeTagNode('h6')
+    // }
   }
 
   toolbarButtons = [

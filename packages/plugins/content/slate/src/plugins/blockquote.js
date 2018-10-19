@@ -23,7 +23,7 @@
 /* eslint-disable prefer-reflect, default-case, react/display-name */
 import BlockquoteIcon from '@material-ui/icons/FormatQuote'
 import React from 'react'
-import createBlockquotePlugin from 'slate-edit-blockquote'
+import createBlockquotePlugin from '@gitbook/slate-edit-blockquote'
 
 import { makeTagNode, ToolbarButton } from '../helpers'
 import Plugin from './Plugin'
@@ -84,9 +84,9 @@ export default class BlockquotePlugin extends Plugin {
   name = 'blockquote'
 
   schema = {
-    nodes: {
-      [BLOCKQUOTE]: makeTagNode('blockquote')
-    }
+    // nodes: {
+    //   [BLOCKQUOTE]: makeTagNode('blockquote')
+    // }
   }
 
   plugins = [

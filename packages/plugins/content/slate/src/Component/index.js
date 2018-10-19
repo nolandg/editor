@@ -25,7 +25,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import React, { Component } from 'react'
 import { Portal } from 'react-portal'
 import position from 'selection-position'
-import { Editor } from 'slate-react'
+import { Editor } from '@gitbook/slate-react'
 import { BottomToolbar, ThemeProvider } from 'ory-editor-ui'
 import { placeholder } from '../const'
 

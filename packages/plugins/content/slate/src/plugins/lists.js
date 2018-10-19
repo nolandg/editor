@@ -27,7 +27,7 @@ import OrderedListIcon from '@material-ui/icons/FormatListNumbered'
 import IncreaseIndentIcon from '@material-ui/icons/FormatIndentIncrease'
 import DecreaseIndentIcon from '@material-ui/icons/FormatIndentDecrease'
 import type { Props } from './props'
-import createListPlugin from 'front-slate-edit-list'
+import createListPlugin from '@gitbook/slate-edit-list'
 
 import { makeTagNode, ToolbarButton } from '../helpers'
 import Plugin from './Plugin'
@@ -119,11 +119,11 @@ export default class ListsPlugin extends Plugin {
   name = 'lists'
 
   schema = {
-    nodes: {
-      [UL]: makeTagNode('ul'),
-      [OL]: makeTagNode('ol'),
-      [LI]: makeTagNode('li')
-    }
+    // nodes: {
+    //   [UL]: makeTagNode('ul'),
+    //   [OL]: makeTagNode('ol'),
+    //   [LI]: makeTagNode('li')
+    // }
   }
 
   toolbarButtons = [

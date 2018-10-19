@@ -26,7 +26,7 @@
 /* eslint prefer-reflect: ["off"] */
 import Subject from '@material-ui/icons/Subject'
 import { compose, flatten, map, prop, pathOr } from 'ramda'
-import Html from 'slate-html-serializer'
+import Html from '@gitbook/slate-html-serializer'
 import React from 'react'
 import { ActionTypes } from 'redux-undo'
 import Component from './Component'

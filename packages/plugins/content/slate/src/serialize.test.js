@@ -21,7 +21,7 @@
  */
 import { Value } from 'slate'
 import { html } from './hooks'
-import Plain from 'slate-plain-serializer'
+import Plain from '@gitbook/slate-plain-serializer'
 
 describe('serialize to html', () => {
   ;[
