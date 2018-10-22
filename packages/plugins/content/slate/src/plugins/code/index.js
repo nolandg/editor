@@ -83,7 +83,7 @@ export default class CodePlugin extends Plugin {
 
   name = 'code'
   schema = {
-    marks: { [CODE]: makeTagMark('code') },
+    marks: { [CODE]: makeTagMark('code') }
     // nodes: { [CODE]: Code }
   }
 
