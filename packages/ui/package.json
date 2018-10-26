@@ -21,13 +21,13 @@
     "@material-ui/icons": "^3.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-jss": "^8.6.1"
+    "react-jss": "^8.6.1",
+    "ory-editor-core": "*"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "device.js": "^2.3.0",
     "lodash.throttle": "^4.1.1",
-    "ory-editor-core": "0.0.0",
     "rc-tooltip": "^3.4.3",
     "react-color": "^2.14.1",
     "react-dnd": "^2.4.0",
