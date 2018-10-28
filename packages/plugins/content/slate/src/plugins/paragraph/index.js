@@ -35,6 +35,12 @@ export default class ParagraphPlugin extends Plugin {
     // nodes: { [P]: Paragraph }
   }
 
+  onKeyDown = (event, change) => {
+    if (event.key !== 'Enter') return;
+    if (event.shiftKey === false) return;
+    return change.insertText('\n');
+  }
+
   deserialize = (el: any, next: any) => {
     switch (el.tagName.toLowerCase()) {
       case 'p':

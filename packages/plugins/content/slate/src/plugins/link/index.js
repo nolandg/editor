@@ -38,6 +38,13 @@ import ThemeProvider from 'ory-editor-ui/lib/ThemeProvider'
 
 export const A = 'LINK/LINK'
 
+class MyLink extends Component {
+  render() {
+    const {children, href} = this.props;
+    return <span onClick={(event) => {console.log('!!!!!!!!!!!')}}>####{children}######</span>
+  }
+}
+
 class LinkButton extends Component {
   state = {
     open: false,
@@ -258,7 +265,20 @@ export default class LinkPlugin extends Plugin {
     }
     switch (object.type) {
       case A:
-        return <a href={object.data.get('href')}>{children}</a>
+        const href = object.data.get('href');
+        if(href[0] === '/') return (
+          <MyLink
+            // onClick={(event) => {
+            //   event.preventDefault();
+            //   console.log('I would go to ' + href);
+            // }}
+            href={href}
+          >
+            {children}
+          </MyLink>
+        );
+
+        return <a href={href}>{children}</a>
     }
   }
 

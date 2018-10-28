@@ -23,7 +23,8 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "ory-editor-core": "*",
-    "ory-editor-ui": "*"
+    "ory-editor-ui": "*",
+    "react-router-dom": "*"
   },
   "dependencies": {
     "@gitbook/slate": "^0.34.10",
