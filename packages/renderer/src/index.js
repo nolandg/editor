@@ -30,14 +30,19 @@ import type { Cell, Row } from 'ory-editor-core/lib/types/editable'
 const gridClass = (size: number = 12): string =>
   `ory-cell-sm-${size} ory-cell-xs-12`
 
-const HTMLRow = ({ cells = [], className, hasInlineChildren, options }: Row) => (
+const HTMLRow = ({
+  cells = [],
+  className,
+  hasInlineChildren,
+  options
+}: Row) => (
   <div
     className={classNames('ory-row', className, {
       'ory-row-has-floating-children': hasInlineChildren
     })}
   >
     {cells.map((c: Cell) => (
-      <HTMLCell key={c.id} {...c} options={options}/>
+      <HTMLCell key={c.id} {...c} options={options} />
     ))}
   </div>
 )
@@ -71,7 +76,7 @@ const HTMLCell = (props: Cell) => {
         <div className="ory-cell-inner">
           <Component isPreviewMode readOnly state={state} onChange={noop}>
             {rows.map((r: Row) => (
-              <HTMLRow key={r.id} {...r} className="ory-cell-inner"/>
+              <HTMLRow key={r.id} {...r} className="ory-cell-inner" />
             ))}
           </Component>
         </div>
@@ -87,7 +92,13 @@ const HTMLCell = (props: Cell) => {
     return (
       <div className={cn}>
         <div className="ory-cell-inner ory-cell-leaf">
-          <Renderer isPreviewMode readOnly state={state} onChange={noop} options={options}/>
+          <Renderer
+            isPreviewMode
+            readOnly
+            state={state}
+            onChange={noop}
+            options={options}
+          />
         </div>
       </div>
     )
@@ -95,7 +106,12 @@ const HTMLCell = (props: Cell) => {
     return (
       <div className={cn}>
         {rows.map((r: Row) => (
-          <HTMLRow key={r.id} {...r} className="ory-cell-inner" options={options} />
+          <HTMLRow
+            key={r.id}
+            {...r}
+            className="ory-cell-inner"
+            options={options}
+          />
         ))}
       </div>
     )
@@ -111,7 +127,7 @@ const HTMLCell = (props: Cell) => {
 export const HTMLRenderer = ({
   state,
   plugins,
-  options,
+  options
 }: {
   state: any,
   plugins: { layout: [], content: [] }

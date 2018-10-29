@@ -261,7 +261,8 @@ export default class LinkPlugin extends Plugin {
       case A:
         const href = object.data.get('href')
 
-        if (href[0] === '/') return <ReactRouterLink to={href}>{children}</ReactRouterLink>
+        if (href[0] === '/')
+          return <ReactRouterLink to={href}>{children}</ReactRouterLink>
         return <a href={href}>{children}</a>
     }
   }

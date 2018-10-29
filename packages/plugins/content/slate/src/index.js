@@ -118,7 +118,7 @@ export default (plugins: Plugin[] = hooks.defaultPlugins) => {
       <div className="ory-plugins-content-slate-container">
         {html.serialize(editorState, options)}
       </div>
-    );
+    )
   }
   // const StaticComponent = ({ state: { editorState } = {} }: Props) => (
   //   <div
@@ -126,7 +126,6 @@ export default (plugins: Plugin[] = hooks.defaultPlugins) => {
   //     dangerouslySetInnerHTML={{ __html: html.serialize(editorState) }}
   //   />
   // );
-
 
   return {
     Component: Slate,
