@@ -33,17 +33,11 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogActions from '@material-ui/core/DialogActions'
 import Button from '@material-ui/core/Button'
 import { Data } from '@gitbook/slate'
+import { Link as ReactRouterLink } from 'react-router-dom'
 import type { Props } from '../props'
 import ThemeProvider from 'ory-editor-ui/lib/ThemeProvider'
 
 export const A = 'LINK/LINK'
-
-class MyLink extends Component {
-  render() {
-    const {children, href} = this.props;
-    return <span onClick={(event) => {console.log('!!!!!!!!!!!')}}>####{children}######</span>
-  }
-}
 
 class LinkButton extends Component {
   state = {
@@ -265,19 +259,9 @@ export default class LinkPlugin extends Plugin {
     }
     switch (object.type) {
       case A:
-        const href = object.data.get('href');
-        if(href[0] === '/') return (
-          <MyLink
-            // onClick={(event) => {
-            //   event.preventDefault();
-            //   console.log('I would go to ' + href);
-            // }}
-            href={href}
-          >
-            {children}
-          </MyLink>
-        );
+        const href = object.data.get('href')
 
+        if (href[0] === '/') return <ReactRouterLink to={href}>{children}</ReactRouterLink>
         return <a href={href}>{children}</a>
     }
   }

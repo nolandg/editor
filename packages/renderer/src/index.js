@@ -5,12 +5,12 @@
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *  
+ *
  * ORY Editor is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
- *  
+ *
  * You should have received a copy of the GNU Lesser General Public License
  * along with ORY Editor.  If not, see <http://www.gnu.org/licenses/>.
  *
@@ -30,14 +30,14 @@ import type { Cell, Row } from 'ory-editor-core/lib/types/editable'
 const gridClass = (size: number = 12): string =>
   `ory-cell-sm-${size} ory-cell-xs-12`
 
-const HTMLRow = ({ cells = [], className, hasInlineChildren }: Row) => (
+const HTMLRow = ({ cells = [], className, hasInlineChildren, options }: Row) => (
   <div
     className={classNames('ory-row', className, {
       'ory-row-has-floating-children': hasInlineChildren
     })}
   >
     {cells.map((c: Cell) => (
-      <HTMLCell key={c.id} {...c} />
+      <HTMLCell key={c.id} {...c} options={options}/>
     ))}
   </div>
 )
@@ -52,7 +52,8 @@ const HTMLCell = (props: Cell) => {
     content = {},
     hasInlineNeighbour,
     inline,
-    size
+    size,
+    options
   } = props
   const cn = classNames('ory-cell', gridClass(size), {
     'ory-cell-has-inline-neighbour': hasInlineNeighbour,
@@ -70,7 +71,7 @@ const HTMLCell = (props: Cell) => {
         <div className="ory-cell-inner">
           <Component isPreviewMode readOnly state={state} onChange={noop}>
             {rows.map((r: Row) => (
-              <HTMLRow key={r.id} {...r} className="ory-cell-inner" />
+              <HTMLRow key={r.id} {...r} className="ory-cell-inner"/>
             ))}
           </Component>
         </div>
@@ -86,7 +87,7 @@ const HTMLCell = (props: Cell) => {
     return (
       <div className={cn}>
         <div className="ory-cell-inner ory-cell-leaf">
-          <Renderer isPreviewMode readOnly state={state} onChange={noop} />
+          <Renderer isPreviewMode readOnly state={state} onChange={noop} options={options}/>
         </div>
       </div>
     )
@@ -94,7 +95,7 @@ const HTMLCell = (props: Cell) => {
     return (
       <div className={cn}>
         {rows.map((r: Row) => (
-          <HTMLRow key={r.id} {...r} className="ory-cell-inner" />
+          <HTMLRow key={r.id} {...r} className="ory-cell-inner" options={options} />
         ))}
       </div>
     )
@@ -109,7 +110,8 @@ const HTMLCell = (props: Cell) => {
 
 export const HTMLRenderer = ({
   state,
-  plugins
+  plugins,
+  options,
 }: {
   state: any,
   plugins: { layout: [], content: [] }
@@ -117,5 +119,5 @@ export const HTMLRenderer = ({
   const service = new PluginService(plugins)
   const props = reducer(service.unserialize(state), { type: 'renderer/noop' })
 
-  return <HTMLRow {...props} />
+  return <HTMLRow options={options} {...props} />
 }
