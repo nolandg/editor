@@ -28,6 +28,7 @@ import position from 'selection-position'
 import { Editor } from '@gitbook/slate-react'
 import { BottomToolbar, ThemeProvider } from 'ory-editor-ui'
 import { placeholder } from '../const'
+import { withStyles } from '@material-ui/core/styles';
 
 import { html as serializer } from '../hooks.js'
 
@@ -38,6 +39,24 @@ const theme = createMuiTheme({
     type: 'dark'
   }
 })
+
+const styles = theme => ({
+  toolbar: {
+    position: 'absolute',
+    zIndex: 1,
+    top: -10000,
+    left: -10000,
+    marginTop: -6,
+    opacity: 0,
+    backgroundColor: 'rgba(0,0,0,.8)',
+    borderRadius: 4,
+    transition: 'opacity .75s',
+  },
+  toolbarHidden:{
+    opacity: '0 !important',
+    pointerEvents: 'none',
+  },
+});
 
 class Slate extends Component {
   componentDidMount = () => {
@@ -103,7 +122,8 @@ class Slate extends Component {
       onKeyDown,
       HoverButtons,
       ToolbarButtons,
-      focus
+      focus,
+      classes,
     } = this.props
     const isOpened = editorState.selection.isExpanded && editorState.isFocused
 
@@ -113,12 +133,7 @@ class Slate extends Component {
           {/* ory-prevent-blur is required to prevent global blurring */}
           <ThemeProvider theme={theme}>
             <div
-              className={
-                'ory-prevent-blur ory-plugins-content-slate-inline-toolbar ' +
-                (isOpened
-                  ? ''
-                  : 'ory-plugins-content-slate-inline-toolbar--hidden')
-              }
+              className={'ory-prevent-blur ' + classes.toolbar + (isOpened ? '' : ' ' + classes.toolbarHidden)}
               style={{ padding: 0 }}
               ref={toolbar => {
                 this.toolbar = toolbar
@@ -158,4 +173,4 @@ class Slate extends Component {
   }
 }
 
-export default Slate
+export default withStyles(styles)(Slate)
