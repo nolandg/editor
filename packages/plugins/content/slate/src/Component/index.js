@@ -28,7 +28,7 @@ import position from 'selection-position'
 import { Editor } from '@gitbook/slate-react'
 import { BottomToolbar, ThemeProvider } from 'ory-editor-ui'
 import { placeholder } from '../const'
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles'
 
 import { html as serializer } from '../hooks.js'
 
@@ -50,13 +50,13 @@ const styles = theme => ({
     opacity: 0,
     backgroundColor: 'rgba(0,0,0,.8)',
     borderRadius: 4,
-    transition: 'opacity .75s',
+    transition: 'opacity .75s'
   },
-  toolbarHidden:{
+  toolbarHidden: {
     opacity: '0 !important',
-    pointerEvents: 'none',
-  },
-});
+    pointerEvents: 'none'
+  }
+})
 
 class Slate extends Component {
   componentDidMount = () => {
@@ -123,7 +123,7 @@ class Slate extends Component {
       HoverButtons,
       ToolbarButtons,
       focus,
-      classes,
+      classes
     } = this.props
     const isOpened = editorState.selection.isExpanded && editorState.isFocused
 
@@ -133,7 +133,11 @@ class Slate extends Component {
           {/* ory-prevent-blur is required to prevent global blurring */}
           <ThemeProvider theme={theme}>
             <div
-              className={'ory-prevent-blur ' + classes.toolbar + (isOpened ? '' : ' ' + classes.toolbarHidden)}
+              className={
+                'ory-prevent-blur ' +
+                classes.toolbar +
+                (isOpened ? '' : ' ' + classes.toolbarHidden)
+              }
               style={{ padding: 0 }}
               ref={toolbar => {
                 this.toolbar = toolbar
