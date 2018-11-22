@@ -20,16 +20,19 @@
   "peerDependencies": {
     "@material-ui/core": "^3.0.3",
     "@material-ui/icons": "^3.0.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
     "ory-editor-core": "*",
     "ory-editor-ui": "*",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-router-dom": "*"
   },
   "dependencies": {
     "@gitbook/slate": "^0.34.10",
     "@gitbook/slate-edit-blockquote": "^0.6.1",
     "@gitbook/slate-edit-list": "^0.12.2",
+    "@gitbook/slate-html-serializer": "^0.6.17-0",
+    "@gitbook/slate-plain-serializer": "^0.5.25",
+    "@gitbook/slate-react": "^0.13.8",
     "@gitbook/slate-schema-violations": "^0.1.23",
     "deep-rename-keys": "^0.2.1",
     "immutable": "3.8.2",
@@ -37,9 +40,6 @@
     "ramda": "^0.24.1",
     "react-portal": "4.1.5",
     "redux-undo": "1.0.0-beta9-7",
-    "selection-position": "^1.0.0",
-    "@gitbook/slate-html-serializer": "0.6.16",
-    "@gitbook/slate-plain-serializer": "^0.5.25",
-    "@gitbook/slate-react": "^0.13.8"
+    "selection-position": "^1.0.0"
   }
 }

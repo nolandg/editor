@@ -22,11 +22,11 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "ory-editor-core": "0.0.0",
-    "ory-editor-ui": "0.0.0"
+    "ory-editor-ui": "0.0.0",
+    "react-resizable": "^1.7.0"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "react-resizable": "^1.7.0"
+    "classnames": "^2.2.5"
   },
   "devDependencies": {}
 }

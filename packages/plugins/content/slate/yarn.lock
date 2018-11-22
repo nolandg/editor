@@ -39,10 +39,10 @@
     "@gitbook/slate-dev-environment" "^0.1.3"
     is-hotkey "^0.1.1"
 
-"@gitbook/slate-html-serializer@0.6.16":
-  version "0.6.16"
-  resolved "https://registry.yarnpkg.com/@gitbook/slate-html-serializer/-/slate-html-serializer-0.6.16.tgz#5da2c69deb6c641ad80be92d38e88aa97404e853"
-  integrity sha512-AZvvWPjCvKQvELP+wOFc0VtYJvFjXr7t4JYyNFrDFPDAPdpPK0UW/PlUH8DUHjzri8JhVtWAoc0/0W6FRqsJVQ==
+"@gitbook/slate-html-serializer@^0.6.17-0":
+  version "0.6.17-0"
+  resolved "https://registry.yarnpkg.com/@gitbook/slate-html-serializer/-/slate-html-serializer-0.6.17-0.tgz#54d677da284a1da03cd60a10158381f37b91a3d8"
+  integrity sha512-dnVb+CBJrnNXTOzG2ARMO7fMnOXSidRV763FYZhh/d8LWYb0JtAxbx0jJ9MUvBSmcAQjfp/L/XNpO1C60Tj/Ew==
   dependencies:
     "@gitbook/slate-dev-logger" "^0.1.40"
     type-of "^2.0.1"
