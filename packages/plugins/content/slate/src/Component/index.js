@@ -40,7 +40,7 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true
-  },
+  }
 })
 
 const styles = theme => ({
