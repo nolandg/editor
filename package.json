@@ -32,7 +32,6 @@
     "@material-ui/icons": "^3.0.1"
   },
   "scripts": {
-    "precommit": "npm-run-all prettier docs:api",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "bootstrap": "lerna bootstrap",
     "build": "cross-env NODE_ENV=production lerna run build --stream",
