@@ -263,7 +263,7 @@ export default class LinkPlugin extends Plugin {
 
         if (href[0] === '/')
           return <ReactRouterLink to={href}>{children}</ReactRouterLink>
-        return <a href={href}>{children}</a>
+        return <a href={href} target="_blank">{children}</a>
     }
   }
 
